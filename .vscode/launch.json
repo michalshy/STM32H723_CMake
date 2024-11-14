@@ -12,7 +12,7 @@
             "interface": "swd",                 //Interface setup
             "serialNumber": "",                 //Set ST-Link ID if you use multiple at the same time
             "runToEntryPoint": "main",          //Run to main and stop there
-            "svdFile": "../STM32H723.svd",         //SVD file to see reisters
+            "svdFile": "${workspaceFolder}/addons/STM32H723.svd",         //SVD file to see reisters
             "v1": false,
             "showDevDebugOutput": "both",
 

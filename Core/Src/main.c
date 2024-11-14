@@ -82,7 +82,7 @@ static void MX_USB_OTG_HS_USB_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t tx_buff[]={0,1,2,3,4,5,6,7,8,9};
 /* USER CODE END 0 */
 
 /**
@@ -119,7 +119,6 @@ int main(void)
   MX_USB_OTG_HS_USB_Init();
   /* USER CODE BEGIN 2 */
 
-  Run();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -127,9 +126,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    HAL_UART_Transmit(&huart3, tx_buff, 10, 1000);
+    HAL_Delay(10000);
     /* USER CODE BEGIN 3 */
   }
+  Run();
   /* USER CODE END 3 */
 }
 
