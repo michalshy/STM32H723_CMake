@@ -11,14 +11,16 @@ Engine::Engine() {
 	//Empty
 }
 
-void Engine::Init(){
+void Engine::Init(TIM_HandleTypeDef _handler){
+	handler = _handler;
 	mInit = true;
 }
 
 void Engine::Loop(){
+	HCSR04 distance_sensor = HCSR04(handler);
 	while(mInit)
 	{
-		HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);
+   		printf("value = %lu\n", distance_sensor.ReadDistance());
 		HAL_Delay(1000);
 	}
 }

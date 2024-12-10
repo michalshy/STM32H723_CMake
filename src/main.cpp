@@ -8,10 +8,10 @@
 #include "main.hpp"
 #include "Engine.hpp"
 
-void Run()
+void Run(TIM_HandleTypeDef _handler)
 {
 	Engine eng = Engine();
-	eng.Init();
+	eng.Init(_handler);
 	eng.Loop();
 }
 

@@ -42,6 +42,7 @@ set(sources_SRCS
     src/Engine.hpp
     src/main.hpp
     src/main.cpp
+    src/libs/HCSR04.hpp
     Core/Src/main.c
     Core/Src/stm32h7xx_hal_msp.c
     Core/Src/stm32h7xx_it.c
